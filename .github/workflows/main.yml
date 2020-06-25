@@ -1,0 +1,52 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Deploy
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on: [push]  
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+      with:
+        ref: master
+       
+    - name: Update Submodule   # 如果仓库有 submodule，在这里更新，没有则删掉此步骤
+      run: |
+        git submodule init
+        git submodule update --remote
+
+    - name: Setup Node            # 安装 Node 环境
+      uses: actions/setup-node@v1
+      with:
+        node-version: "10.x"
+
+    - name: Hexo Generate         # 安装 Hexo 依赖并且生成静态文件
+      run: |
+        rm -f .yarnclean
+        yarn --frozen-lockfile --ignore-engines --ignore-optional --non-interactive --silent --ignore-scripts --production=false
+        rm -rf ./public
+        yarn run hexo clean
+        yarn run hexo generate
+    
+    - name: Deploy to OSS
+      env:
+        OSS_AccessKeyID: ${{ LTAI4GKxVEW9uFWXXfKDi1tX }}
+        OSS_AccessKeySecret: ${{ 8EMTfIT7vXJRyAmN0P9APCceGRn5PQ }}
+        OSS_EndPoint: oss-ap-southeast-1.aliyuncs.com
+        OSS_Bucket: nefelibatablog
+      run: |
+        wget -q http://gosspublic.alicdn.com/ossutil/1.6.10/ossutil64
+        chmod +x ./ossutil64
+        ./ossutil64 config -e $OSS_EndPoint -i $OSS_AccessKeyID -k $OSS_AccessKeySecret -L CH
+        ./ossutil64 rm -r -f oss://$OSS_Bucket/
+        ./ossutil64 cp -r -f ./public oss://$OSS_Bucket/
