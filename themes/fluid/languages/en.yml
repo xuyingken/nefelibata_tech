@@ -1,0 +1,44 @@
+search:
+  title: Search
+  keyword: keyword
+  status:
+    success: v
+    error: x
+
+postTotal: "%d posts in total."
+
+paginator:
+  pre: Previous
+  next: Next
+
+post:
+  toc: Table of Contents
+  pre: Previous
+  next: Next
+
+home:
+  title: Home
+
+archive:
+  title: Archives
+  subtitle: Archives
+
+tag:
+  title: Tags
+  subtitle: Tags
+
+category:
+  title: Categories
+  subtitle: Categories
+
+about:
+  title: About
+  subtitle: About
+
+page404:
+  title: Page not found
+  subtitle: Oops, Page not found...
+
+links:
+  title: Links
+  subtitle: Links
