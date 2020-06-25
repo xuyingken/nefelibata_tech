@@ -40,8 +40,8 @@ jobs:
     
     - name: Deploy to OSS
       env:
-        OSS_AccessKeyID: ${{ LTAI4GKxVEW9uFWXXfKDi1tX }}
-        OSS_AccessKeySecret: ${{ 8EMTfIT7vXJRyAmN0P9APCceGRn5PQ }}
+        OSS_AccessKeyID: ${{ secrets.AC_ACCESS_KEY_ID }}
+        OSS_AccessKeySecret: ${{ secrets.AC_ACCESS_KEY_SECRET }}
         OSS_EndPoint: oss-ap-southeast-1.aliyuncs.com
         OSS_Bucket: nefelibatablog
       run: |
