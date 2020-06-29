@@ -233,8 +233,8 @@ post:  # 部分配置同时控制自定义页面，注意备注
     specific: false  # 开启后，只有在文章 Front-matter 里指定 `mermaid: true` 才会在文章页启动公式转换，以便在页面不包含公式时提高加载速度
     options: { theme: 'default' }  # 接口选项，具体可见：http://mermaid-js.github.io/mermaid/#/mermaidAPI
   comments:  # 评论
-    enable: false  # 开启评论
-    type: disqus  # 指定使用的评论模块  available: disqus | valine | gitalk | utterances | changyan | livere  推荐 utterances
+    enable: true  # 开启评论
+    type: utterances  # 指定使用的评论模块  available: disqus | valine | gitalk | utterances | changyan | livere  推荐 utterances
 
 
 #---------------------------
@@ -247,8 +247,8 @@ post:  # 部分配置同时控制自定义页面，注意备注
 # utterances
 # You can install utterances with https://utteranc.es/ and generate your configuration
 utterances:
-  repo:
-  issue_term:
+  repo: xuyingken/nefelibata_comments
+  issue_term: pathname
   label: utterances
   theme: github-light
   crossorigin: anonymous
@@ -267,13 +267,13 @@ disqus:
 # You can get yout ClientID and ClientSecret from https://github.com/settings/applications/new
 # More info available at https://github.com/gitalk/gitalk#options
 gitalk:
-  clientID:                     # GitHub Application Client ID
-  clientSecret:                 # GitHub Application Client Secret
-  repo:                         # The repo to store comments
-  owner:                        # GitHub repository owner. Can be personal user or organization.
-  admin:                        # GitHub repo owner and collaborators, only these guys can initialize github issues, should be like "['admin']" or "['admin1','admin2']"
+  clientID: 606e5f9cb397e6979b3c                    # GitHub Application Client ID
+  clientSecret: 635df2e0a8e1f2d3eb3b947c6961c579b0b1318c               # GitHub Application Client Secret
+  repo: nefelibata_comments                        # The repo to store comments
+  owner:  xuyingken                      # GitHub repository owner. Can be personal user or organization.
+  admin:  xuyingken                      # GitHub repo owner and collaborators, only these guys can initialize github issues, should be like "['admin']" or "['admin1','admin2']"
   id: location.pathname         # The unique id of the page. Length must less than 50.
-  language: zh-CN               # Localization language key, en, zh-CN and zh-TW are currently available.
+  language: en               # Localization language key, en, zh-CN and zh-TW are currently available.
   labels: "['Gitalk']"          # GitHub issue labels.
   perPage: 15                   # Pagination size, with maximum 100.
   pagerDirection: last          # Comment sorting direction, available values are last and first.
