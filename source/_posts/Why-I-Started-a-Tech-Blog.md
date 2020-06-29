@@ -1,7 +1,7 @@
 ---
 layout: hexo
 title: Why I Started a Tech Blog
-date: 2020-06-29 17:24:22
+date: 2020-06-28 17:24:22
 categories:
     - Non Technical
 tags: 
