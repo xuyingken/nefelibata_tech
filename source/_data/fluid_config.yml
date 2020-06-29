@@ -257,6 +257,7 @@ utterances:
 # 国内用户不要用，已被墙
 disqus:
   shortname: nefelibata-tech # your shortname
+  count: true
   # The following are Disqusjs configurations, please ignore if DisqusJS is not required
   # 以下为 Disqusjs 支持, 如不需要 DisqusJS 请忽略
   # https://github.com/SukkaW/DisqusJS
