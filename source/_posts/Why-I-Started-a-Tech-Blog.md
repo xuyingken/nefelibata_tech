@@ -22,7 +22,7 @@ As a CS student or an IT professional, very often we google technical issues onl
 Documenting and summarizing can enforce what you learnt, everyone knows it. However, not many of us can do it diligently. People learnt from their mistakes provided they remember them, I couldn't remember how many times I have to search the internet on technical issues I have faced before, but just could not remember the details. Tech blog can be good platform to record technical solutions I came across before and documenting the details I hope I can make them truly part of my knowledge. 
 
 
-## To Improve my Writing
+## To Improve My Writing Skill
 As you may already able to tell, I am not good at writing. Ever since I started working, my writing skill has gone from bad to worst. As an IT professional, I often have to create technical documents, which always follow some templates and does not require much creativity. The closest thing I wrote these days required some writing skills are emails, but they need to be professional and concise. On the other hand, writing on a personal tech blog does not have to bond to rules and templates, and hopefully I can improve my writing skills in the process. 
 
 ## To Use It as My CV
