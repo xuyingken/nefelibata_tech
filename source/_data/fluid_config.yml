@@ -234,7 +234,7 @@ post:  # 部分配置同时控制自定义页面，注意备注
     options: { theme: 'default' }  # 接口选项，具体可见：http://mermaid-js.github.io/mermaid/#/mermaidAPI
   comments:  # 评论
     enable: true  # 开启评论
-    type: disqus  # 指定使用的评论模块  available: disqus | valine | gitalk | utterances | changyan | livere  推荐 utterances
+    type: valine  # 指定使用的评论模块  available: disqus | valine | gitalk | utterances | changyan | livere  推荐 utterances
 
 
 #---------------------------
@@ -267,8 +267,8 @@ disqus:
 # You can get yout ClientID and ClientSecret from https://github.com/settings/applications/new
 # More info available at https://github.com/gitalk/gitalk#options
 gitalk:
-  clientID: 606e5f9cb397e6979b3c                    # GitHub Application Client ID
-  clientSecret: 635df2e0a8e1f2d3eb3b947c6961c579b0b1318c               # GitHub Application Client Secret
+  clientID:                     # GitHub Application Client ID
+  clientSecret:                # GitHub Application Client Secret
   repo: nefelibata_comments                        # The repo to store comments
   owner:  xuyingken                      # GitHub repository owner. Can be personal user or organization.
   admin:  xuyingken                      # GitHub repo owner and collaborators, only these guys can initialize github issues, should be like "['admin']" or "['admin1','admin2']"
@@ -284,14 +284,14 @@ gitalk:
 # 完整文档 https://valine.js.org/configuration.html
 # 注意：下列配置项中的 true/false 不要用引号括起来
 valine:
-  appid:  # 从 LeanCloud 的应用中得到的 appId
-  appkey:  # 从 LeanCloud 的应用中得到的 APP Key
-  placeholder: 说点什么 # 评论框占位提示符
+  appid: omz04SVDkeOi3VvAr4yesLV2-MdYXbMMI # 从 LeanCloud 的应用中得到的 appId
+  appkey:  rzpxF4R8xqU0HF6UKUOQlxPU # 从 LeanCloud 的应用中得到的 APP Key
+  placeholder: Say something... # 评论框占位提示符
   path: window.location.pathname # 当前文章页路径，用于区分不同的文章页，以保证正确读取该文章页下的评论列表
   avatar: retro # Gravatar 头像展示方式
-  meta: ['nick', 'mail', 'link']  # 评论者相关属性
+  meta: ['nick', 'mail']  # 评论者相关属性
   pageSize: 10 # 评论列表分页，每页条数
-  lang: zh-CN # zh-CN | zh-TW | en | ja
+  lang: en # zh-CN | zh-TW | en | ja
   highlight: false # 代码高亮
   recordIP: false # 是否记录评论者IP
   serverURLs:  # REST API 服务器地址，国际版不填
