@@ -10,6 +10,7 @@ tags:
     - CDN
     - Github Action
 ---
+{% asset_img logo.png logo %}
 
 In the [previous post](./2020-07-05-Why-I-am-Using-JAMStack-for-My-Blog.html) I have discussed what is JAMStack and why I am using for my tech blog. In this post I am going to share the workflow I used to set up my tech blog.
 
