@@ -128,7 +128,7 @@ Go to OSS, click on the your Bucket, then **Transmission**, **Domain Names**.
 
 Make sure your custom domain name is pointing to the Alibaba Cloud CDN Domain Name and then points to the OSS Domain Name.
 
-## Set up GitHub action for CI/CD
+## Set up GitHub Action for CI/CD
 ### Create secrets for Github Action
 Go to your Github repository, then **Settings**. Create two secrets as the follows:
 {% asset_img git_secret.png git_secret %}
