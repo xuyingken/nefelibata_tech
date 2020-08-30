@@ -208,8 +208,10 @@ Example: change "your_blog_domain/about/" to "your_blog_domain/about/index.html"
 
 ### Deploy
 After push your blog content to your Github master branch, at your Github Repository, Actions page, you should see the Action Script starts to run. Once completed, your blog is finally ONLINE!
+{% asset_img git_action.png git_action %}
 
 ## Conclusion
 
 Using Hexo + Github + Github Action + Alibaba Cloud OSS+ Alibaba Cloud CDN is a good demonstration of JAMStack in action. 
+
 In terms of the cost of using Alibaba Cloud OSS and CDN, you can find them [here](https://www.alibabacloud.com/product/oss/pricing?spm=a3c0i.7950270.1834322160.1.742dab91KeUDPE) (OSS) and [here](https://www.alibabacloud.com/product/cdn/pricing?spm=a3c0i.7958120.7305017250.1.680d7b744o2ZyD) (CDN). For an average traffic blog, it is very cheap. In fact, for OSS, it is free of charge if your blog's storage and traffic is under 5GB. The only thing you need to pay is the traffic in CDN (using CDN is optional). 
