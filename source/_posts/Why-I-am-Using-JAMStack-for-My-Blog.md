@@ -1,5 +1,5 @@
 ---
-title: Why I am Using JAMStack to Set Up My Blog
+title: Why I am Using JAMStack for My Blog
 date: 2020-07-05 23:21:23
 categories:
     - Solution Architecture 
