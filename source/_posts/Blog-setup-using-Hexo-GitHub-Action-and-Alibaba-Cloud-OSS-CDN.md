@@ -10,7 +10,6 @@ tags:
     - CDN
     - Github Action
 ---
-{% asset_img hexo_ali_git.png hexo_ali_git %}
 
 In the [previous post](./2020-07-05-Why-I-am-Using-JAMStack-for-My-Blog.html) I have discussed what is JAMStack and why I am using for my tech blog. In this post I am going to share the workflow I used to set up my tech blog.
 
@@ -30,6 +29,8 @@ Creating a personal blog may not need to follow all these, but for learning purp
 - GitHub for version control
 - GitHub Action to automate the build and deployment of the site
 - Alibaba OSS and CDN for hosting the of the blog
+
+{% asset_img hexo_ali_git.png hexo_ali_git %}
 
 ## Setup Hexo 
 Before setting up Hexo make sure you have node.js and Git installed.
