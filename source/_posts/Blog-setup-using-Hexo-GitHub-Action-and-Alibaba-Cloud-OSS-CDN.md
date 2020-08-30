@@ -10,6 +10,8 @@ tags:
     - CDN
     - Github Action
 ---
+{% asset_img hexo_ali_git.png hexo_ali_git %}
+
 In the [previous post](./2020-07-05-Why-I-am-Using-JAMStack-for-My-Blog.html) I have discussed what is JAMStack and why I am using for my tech blog. In this post I am going to share the workflow I used to set up my tech blog.
 
 The simplest way setup a JAMStack blog is to use a static site generator like Hexo, NEXT.js or Hugo, write your content in a markup that the generator supports, generate the site into html, js and css files, then use the generator's build-in deploy function to deploy it on to some static web server like Github pages.
