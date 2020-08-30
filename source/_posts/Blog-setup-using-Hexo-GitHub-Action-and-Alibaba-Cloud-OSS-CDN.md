@@ -30,8 +30,6 @@ Creating a personal blog may not need to follow all these, but for learning purp
 - GitHub Action to automate the build and deployment of the site
 - Alibaba OSS and CDN for hosting the of the blog
 
-{% asset_img hexo_ali_git.png hexo_ali_git %}
-
 ## Setup Hexo 
 Before setting up Hexo make sure you have node.js and Git installed.
 More info: [Hexo Requirements](https://hexo.io/docs/#Requirements)
