@@ -87,8 +87,8 @@ To host static pages in OSS, click on the newly created Bucket and go to basic s
 
 ## Set up Alibaba CDN
 The advantage of using CDN is it will accelerate the content delivery as it caches the static contents in nodes near the users. This works particularly well with JAMStack, as the generated content are all static files.
-Before using CDN, you need to have an existing domain name. The setup will be easier if your domain name is with Alibaba Cloud.
-To purchase domain name at Alibaba Cloud click [here](https://www.alibabacloud.com/domain/search)
+
+Before using CDN, you need to have an existing domain name. The setup will be easier if your domain name is with Alibaba Cloud. To purchase domain name at Alibaba Cloud click [here](https://www.alibabacloud.com/domain/search)
 
 ### Add domain names
 Go to Alibaba Cloud CDN, Domain Names, add your domain name with the following settings:
@@ -98,7 +98,7 @@ Set Origin Info to **OSS Domain** and select the OSS url which points to your ne
 
 For **Port** set to **433** if you intend to use https (will show the steps later), if not chose **80**.
 
-Region change to Global (Excluding Mainland China).
+**Region** change to Global (Excluding Mainland China).
 
 After the Domain Name is added, a CNAME will be generated (it will take awhile). Copy this value for DNS setting later. 
 {% asset_img cdn_cname.png cdn_cname %}
@@ -114,10 +114,10 @@ Set the **Value** to the CNAME you copied from the CDN earlier.
 ### Set up HTTPS
 There are a few ways to setup SSL for your Domain, the easiest way is to use Alibaba Cloud CDN's free Https Certificate.
 
-In Alibaba Cloud CDN click on the your Domain Name, under HTTPS section, chose Modify.
+In Alibaba Cloud CDN click on the your Domain Name, under **HTTPS** section, chose Modify.
 {% asset_img cdn_https.png cdn_https %}
 
-Enable HTTPS Secure, and chose Free Certificate. By doing this Alibaba Cloud will apply the SSL for you (the approval process will take a few hours).
+Enable **HTTPS Secure**, and chose **Free Certificate**. By doing this Alibaba Cloud will apply the SSL for you (the approval process will take a few hours).
 {% asset_img cdn_ssl.png cdn_ssl %}
 
 After that change **Force Redirect** to **HTTP->HTTPS**.
@@ -128,7 +128,7 @@ Go to OSS, click on the your Bucket, then **Transmission**, **Domain Names**.
 
 {% asset_img oss_bind.png oss_bind %}
 
-Make sure your custom domain name is pointing to the Alibaba Cloud CDN Domain Name and then points to the OSS Domain Name.
+Make sure your **custom domain name** is pointing to the **Alibaba Cloud CDN Domain Name** and then points to the **OSS Domain Name**.
 
 ## Set up GitHub Action for CI/CD
 ### Create secrets for Github Action
@@ -192,8 +192,7 @@ jobs:
         ./ossutil64 rm -r -f oss://$OSS_Bucket/
         ./ossutil64 cp -r -f ./public oss://$OSS_Bucket/
 ```
-Make sure you change the **OSS_EndPoint** and **OSS_Bucket**
-Once this file is checked into Github, a Github Action will be created. This action script will be trigger upon every push of code to your Github master branch, and it will generate the blog html files then push them to your OSS bucket. 
+Make sure you change the **OSS_EndPoint** and **OSS_Bucket**. Once this file is checked into Github, a Github Action will be created. This action script will be trigger upon every push of code to your Github master branch, and it will generate the blog html files then push them to your OSS bucket. 
 
 ## Going Live
 ### Hexo tweaks for Alibaba OSS
@@ -210,11 +209,11 @@ There are also some pages paths defined in theme configs, make sure they are set
 Example: change "your_blog_domain/about/" to "your_blog_domain/about/index.html".
 
 ### Deploy
-After check in your Hexo blog to your Github master branch, at your Github Repository, Actions page, you should see the Action Script starts to run. Once completed, your blog is finally ONLINE!
+After check in your Hexo blog to your Github master branch, at your Github Repository, Actions page, you should see the Action Script starts to run. Once completed, your blog is finally **ONLINE**!
 {% asset_img git_action.png git_action %}
 
 ## Conclusion
 
-Using Hexo + Github + Github Action + Alibaba Cloud OSS+CDN is a good demonstration of JAMStack in action. 
+Using **Hexo + Github + Github Action + Alibaba Cloud OSS+CDN** is a good demonstration of JAMStack in action. 
 
-In terms of the cost of using Alibaba Cloud OSS and CDN, you can find them [here](https://www.alibabacloud.com/product/oss/pricing?spm=a3c0i.7950270.1834322160.1.742dab91KeUDPE) (OSS) and [here](https://www.alibabacloud.com/product/cdn/pricing?spm=a3c0i.7958120.7305017250.1.680d7b744o2ZyD) (CDN). For an average traffic blog, it is very cheap. In fact, for OSS, it is free of charge if your blog's storage and traffic is under 5GB. The only thing you need to pay is the traffic for CDN (using CDN is optional). 
+In terms of the cost of using **Alibaba Cloud OSS and CDN**, you can find them [here](https://www.alibabacloud.com/product/oss/pricing?spm=a3c0i.7950270.1834322160.1.742dab91KeUDPE) (OSS) and [here](https://www.alibabacloud.com/product/cdn/pricing?spm=a3c0i.7958120.7305017250.1.680d7b744o2ZyD) (CDN). For an average traffic blog, it is very cheap. In fact, for OSS, it is **free** of charge if your blog's storage and traffic is under **5GB**. The only thing you need to pay is the traffic for CDN (using CDN is optional). 
